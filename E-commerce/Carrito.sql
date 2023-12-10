@@ -9,3 +9,5 @@ CREATE TABLE Ecommerce.Carrito (
     CONSTRAINT FOREIGN KEY (id_Producto) REFERENCES Ecommerce.Carrito(id),
     CONSTRAINT FOREIGN KEY (id_Cliente) REFERENCES Ecommerce.Carrito(id)
 );
+
+
