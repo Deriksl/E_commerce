@@ -2,7 +2,7 @@
 DROP TABLE IF EXISTS Ecommerce.Categoria;
 
 CREATE TABLE Ecommerce.Categoria(
-    id INT PRIMARY KEY,
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255)
 );
 

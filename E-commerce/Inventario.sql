@@ -2,11 +2,11 @@
 DROP TABLE IF EXISTS Ecommerce.Inventario;
 
 CREATE TABLE Ecommerce.Inventario (
-    id INT PRIMARY KEY,
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     cantidad INT,
     fecha_reciente DATE,
-    id_Producto INT,
-    CONSTRAINT FOREIGN KEY (id_Producto) REFERENCES Ecommerce.Inventario(id)
+    id_Producto BIGINT,
+    CONSTRAINT FK_PR FOREIGN KEY (id_Producto) REFERENCES Ecommerce.Producto(id)
 );
 
 INSERT INTO Ecommerce.Inventario (id, cantidad, fecha_reciente, id_Producto) VALUES

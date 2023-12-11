@@ -2,12 +2,12 @@
 DROP TABLE IF EXISTS Ecommerce.Pedido;
 
 CREATE TABLE Ecommerce.Pedido (
-    id INT PRIMARY KEY,
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     fecha_pedido DATE,
-    id_Status INT,
-    id_Cliente INT,
-    CONSTRAINT FOREIGN KEY (id_Status) REFERENCES Ecommerce.Pedido(id),
-    CONSTRAINT FOREIGN KEY (id_Cliente) REFERENCES Ecommerce.Pedido(id)
+    id_Status BIGINT,
+    id_Cliente BIGINT,
+    CONSTRAINT FK_ECS FOREIGN KEY (id_Status)  REFERENCES Ecommerce.Status(id),
+    CONSTRAINT FK_ECCL FOREIGN KEY (id_Cliente) REFERENCES Ecommerce.Cliente(id)
 );
 
 INSERT INTO Ecommerce.Pedido (id, fecha_pedido, id_Status, id_Cliente) VALUES

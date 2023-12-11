@@ -3,14 +3,15 @@ DROP TABLE IF EXISTS Ecommerce.Transaccion_historial;
 
 
 CREATE TABLE Ecommerce.Transaccion_historial (
-    id INT PRIMARY KEY,
-    id_Transaccion INT,
-    id_Cliente INT,
-    CONSTRAINT FOREIGN KEY (id_Transaccion) REFERENCES Ecommerce.Transaccion_historial(id),
-    CONSTRAINT FOREIGN KEY (id_Cliente) REFERENCES Ecommerce.Transaccion_historial(id)
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id_Transaccion BIGINT,
+    id_Cliente BIGINT,
+    CONSTRAINT FK_ECTR FOREIGN KEY (id_Transaccion) REFERENCES Ecommerce.Transaccion(id),
+    CONSTRAINT FK_ECLIENTE FOREIGN KEY (id_Cliente) REFERENCES Ecommerce.Cliente(id)
 );
 
-INSERT INTO Ecommerce.Transaccion_historial (id, id_Transaccion, id_Cliente) VALUES (1, 1, 1),
+INSERT INTO Ecommerce.Transaccion_historial (id, id_Transaccion, id_Cliente) VALUES
+(1, 1, 1),
 (2, 2, 2),
 (3, 3, 3),
 (4, 4, 4),

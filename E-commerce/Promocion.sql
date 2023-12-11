@@ -2,7 +2,7 @@
 DROP TABLE IF EXISTS Ecommerce.Promocion;
 
 CREATE TABLE Ecommerce.Promocion (
-    id INT PRIMARY KEY,
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255),
     descripcion TEXT,
     descuento DECIMAL(5, 2),

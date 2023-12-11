@@ -2,7 +2,7 @@
 DROP TABLE IF EXISTS Ecommerce.Direccion;
 
 CREATE TABLE Ecommerce.Direccion (
-    id INT PRIMARY KEY,
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     pais VARCHAR(255),
     estado VARCHAR(255),
     ciudad VARCHAR(255),

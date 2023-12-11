@@ -2,11 +2,11 @@
 DROP TABLE IF EXISTS Ecommerce.Envio;
 
 CREATE TABLE Ecommerce.Envio (
-    id INT PRIMARY KEY,
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     fecha_envio DATE,
     fecha_entrega DATE,
-    id_Status INT,
-    CONSTRAINT FOREIGN KEY (id_Status) REFERENCES Ecommerce.Envio(id)
+    id_Status BIGINT,
+    CONSTRAINT FK_ECST FOREIGN KEY (id_Status) REFERENCES Ecommerce.Status(id)
 );
 
 INSERT INTO Ecommerce.Envio (id, fecha_envio, fecha_entrega, id_Status) VALUES

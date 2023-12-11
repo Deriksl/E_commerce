@@ -2,11 +2,11 @@
 DROP TABLE IF EXISTS Ecommerce.Tracking;
 
 CREATE TABLE Ecommerce.Tracking (
-    id INT PRIMARY KEY,
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     ubicacion VARCHAR(255),
     fecha_actualizacion DATE,
-    id_Pedido INT,
-    CONSTRAINT FOREIGN KEY (id_Pedido) REFERENCES Ecommerce.Tracking(id)
+    id_Pedido BIGINT,
+    CONSTRAINT FK_ECPE FOREIGN KEY (id_Pedido) REFERENCES Ecommerce.Pedido(id)
 );
 
 INSERT INTO Ecommerce.Tracking (id, ubicacion, fecha_actualizacion, id_Pedido) VALUES

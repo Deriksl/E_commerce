@@ -2,10 +2,10 @@
 DROP TABLE IF EXISTS Ecommerce.Palabra_clave;
 
 CREATE TABLE Ecommerce.Palabra_clave (
-    id INT PRIMARY KEY,
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     palabra VARCHAR(255),
-    Producto_id INT,
-    CONSTRAINT FOREIGN KEY (Producto_id) REFERENCES Ecommerce.Palabra_clave(id)
+    Producto_id BIGINT,
+    CONSTRAINT FK_P FOREIGN KEY (Producto_id) REFERENCES Ecommerce.Producto(id)
 );
 
 INSERT INTO Ecommerce.Palabra_clave (id, palabra, Producto_id) VALUE

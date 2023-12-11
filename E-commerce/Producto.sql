@@ -2,16 +2,16 @@
 DROP TABLE IF EXISTS Ecommerce.Producto;
 
 CREATE TABLE Ecommerce.Producto (
-    id INT PRIMARY KEY,
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255),
     descripcion TEXT,
     precio DECIMAL(10,2),
     imagen TEXT,
     existencias INT,
-    id_Categoria INT,
-    id_Provedor INT,
-    CONSTRAINT FOREIGN KEY (id_Categoria) REFERENCES Ecommerce.Producto(id),
-    CONSTRAINT FOREIGN KEY (id_Provedor) REFERENCES Ecommerce.Producto(id)
+    id_Categoria BIGINT,
+    id_Provedor BIGINT,
+    CONSTRAINT FK_ECCA FOREIGN KEY (id_Categoria) REFERENCES Ecommerce.Categoria(id),
+    CONSTRAINT FK_ECPV FOREIGN KEY (id_Provedor) REFERENCES Ecommerce.Provedor(id)
 );
 
 INSERT INTO Ecommerce.Producto (id,nombre,descripcion,precio,imagen,existencias,id_Categoria,id_Provedor) VALUES

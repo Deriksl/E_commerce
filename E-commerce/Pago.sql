@@ -2,13 +2,13 @@
 DROP TABLE IF EXISTS Ecommerce.Pago;
 
 CREATE TABLE Ecommerce.Pago (
-    id INT PRIMARY KEY,
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     monto DECIMAL(10, 2),
     fecha DATE,
-    id_Pedido INT,
-    id_Metodo_pago INT,
-    CONSTRAINT FOREIGN KEY (id_Pedido) REFERENCES Ecommerce.Pago(id),
-    CONSTRAINT FOREIGN KEY (id_Metodo_pago) REFERENCES Ecommerce.Pago(id)
+    id_Pedido BIGINT,
+    id_Metodo_pago BIGINT,
+    CONSTRAINT FK_PEDIDO FOREIGN KEY (id_Pedido) REFERENCES Ecommerce.Pedido(id),
+    CONSTRAINT FK_MP FOREIGN KEY (id_Metodo_pago) REFERENCES Ecommerce.Metodo_pago(id)
 );
 
 INSERT INTO Ecommerce.Pago (id, monto, fecha, id_Pedido, id_Metodo_pago) VALUES

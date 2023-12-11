@@ -1,16 +1,16 @@
 DROP DATABASE IF EXISTS Ecommerce;
 CREATE DATABASE Ecommerce;
 
-DROP TABLE IF EXISTS Ecommerce.Proveedor;
+DROP TABLE IF EXISTS Ecommerce.Provedor;
 
-CREATE TABLE Ecommerce.Proveedor (
-    id INT PRIMARY KEY,
+CREATE TABLE Ecommerce.Provedor (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255),
     direccion VARCHAR(255),
     telefono VARCHAR(15)
 );
 
-INSERT INTO Ecommerce.Proveedor (id, nombre, direccion, telefono) VALUES
+INSERT INTO Ecommerce.Provedor (id, nombre, direccion, telefono) VALUES
 (1, 'Adidas', 'Estados Unidos', '14853797'),
 (2, 'Nike', 'Canadá', '98765432'),
 (3, 'LOréal', 'Francia', '123456789'),

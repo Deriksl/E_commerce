@@ -2,7 +2,7 @@
 DROP TABLE IF EXISTS Ecommerce.Metodo_pago;
 
 CREATE TABLE Ecommerce.Metodo_pago (
-    id INT PRIMARY KEY,
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     metodo VARCHAR(255)
 );
 
