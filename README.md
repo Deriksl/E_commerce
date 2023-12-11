@@ -1,3 +1,3 @@
 # E_commerce
 
-Arregle un error en productos 
+YA CORRE LA BASE
