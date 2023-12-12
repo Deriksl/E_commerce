@@ -1,0 +1,8 @@
+
+DROP TABLE IF EXISTS Ecommerce.Pago;
+
+CREATE TABLE Ecommerce.Pago (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    monto DECIMAL(10, 2) NOT NULL,
+    fecha DATE NOT NULL
+);
