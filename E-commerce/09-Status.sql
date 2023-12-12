@@ -1,8 +1,0 @@
-
-DROP TABLE IF EXISTS Ecommerce.Status;
-
-CREATE TABLE Ecommerce.Status (
-    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    estado VARCHAR(255) NOT NULL
-);
-
