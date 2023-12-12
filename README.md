@@ -1,3 +1,3 @@
 # E_commerce
 
-Agregue datos en cada tabla como ejemplo
+YA CORRE LA BASE
