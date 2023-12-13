@@ -1,3 +1,9 @@
 # E_commerce
 
-YA CORRE LA BASE
+Proyecto final 
+
+Jose Eduardo Lara Prado
+Derik Salazar Lopez
+Angel Manuel Mejia Perez
+Sebastian Enriquez Roque
+
